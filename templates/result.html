@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Removal Result</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+  <h1>Input Image</h1>
+  <div id="input-image">
+    <img src="data:image/png;base64,{{ input_image }}" alt="Input Image">
+  </div>
+  <h1>Removed Background</h1>
+  <div id="output-image">
+    <img src="data:image/png;base64,{{ output_image }}" alt="Output Image">
+  </div>
+</body>
+</html>

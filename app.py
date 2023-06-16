@@ -58,7 +58,9 @@ def image_to_base64(image):
 
 """if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=8000,channel_timeout=600)
-    #serve(app, host='0.0.0.0', port=8000, threads=1, channel_timeout=600)"""
+    #serve(app, host='0.0.0.0', port=8000, threads=1, channel_timeout=600)
 if __name__ == '__main__':
     #app.run(port=8000)
-    serve(app, host='0.0.0.0', port=8000,channel_timeout=600)
+    serve(app, host='0.0.0.0', port=8000,channel_timeout=600)"""
+if __name__ == '__main__':
+    app.run(debug=True)

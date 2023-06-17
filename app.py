@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 from background_remover_function import generate_mask, remove_background, postprocess, extract_foreground
-from waitress import serve
+import os
 
 app = Flask(__name__)
 #app.debug = True  # Enable debug mode for detailed error messages

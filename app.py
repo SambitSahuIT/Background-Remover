@@ -14,8 +14,8 @@ model = tf.keras.models.load_model(r'background_remover_model.h5')
 input_dimension = (64, 64)  # Adjust according to your model's input size
 output_dimension = (64, 64)  # Adjust according to your desired output size
 
-print('Model loaded. Start serving...')
-print('Model loaded. Check http://127.0.0.1:8000/')
+#print('Model loaded. Start serving...')
+#print('Model loaded. Check http://127.0.0.1:8000/')
 
 @app.route('/')
 def home():
@@ -56,11 +56,6 @@ def image_to_base64(image):
     img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
     return img_str
 
-"""if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=8000,channel_timeout=600)
-    #serve(app, host='0.0.0.0', port=8000, threads=1, channel_timeout=600)
-if __name__ == '__main__':
-    #app.run(port=8000)
-    serve(app, host='0.0.0.0', port=8000,channel_timeout=600)"""
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 8000))
+    app.run(debug=True, host='0.0.0.0', port=port)
